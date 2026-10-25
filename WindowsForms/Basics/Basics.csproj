@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormattingForm.cs">
+    <Compile Include="part2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormattingForm.Designer.cs">
-      <DependentUpon>FormattingForm.cs</DependentUpon>
+    <Compile Include="part2.Designer.cs">
+      <DependentUpon>part2.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -58,10 +58,49 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="part3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="part3.Designer.cs">
+      <DependentUpon>part3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="part4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="part4.Designer.cs">
+      <DependentUpon>part4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="part5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="part5.Designer.cs">
+      <DependentUpon>part5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="part6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="part6.Designer.cs">
+      <DependentUpon>part6.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormattingForm.resx">
-      <DependentUpon>FormattingForm.cs</DependentUpon>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="part2.resx">
+      <DependentUpon>part2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="part3.resx">
+      <DependentUpon>part3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="part4.resx">
+      <DependentUpon>part4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="part5.resx">
+      <DependentUpon>part5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="part6.resx">
+      <DependentUpon>part6.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
