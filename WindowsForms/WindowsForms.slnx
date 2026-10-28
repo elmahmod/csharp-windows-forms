@@ -1,4 +1,6 @@
 <Solution>
   <Project Path="Basics/Basics.csproj" Id="dc4f3b53-17a4-4923-884c-0f8d9a0e731c" />
+  <Project Path="DisplayAndMedia/DisplayAndMedia.csproj" Id="7f4e8c26-56ca-47c5-a3c0-c386f0978b80" />
+  <Project Path="InputControls/InputControls.csproj" Id="504e348a-bd17-4776-8706-e9d16f0ac179" />
   <Project Path="Practicing/Practicing.csproj" Id="1ebf10fa-4cb9-44d9-910a-76848be9c339" />
 </Solution>
