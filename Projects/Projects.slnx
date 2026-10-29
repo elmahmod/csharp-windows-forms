@@ -1,4 +1,5 @@
 <Solution>
   <Project Path="PCBuilder/PCBuilder.csproj" Id="a85fa6fc-6cb2-409c-aed7-fb981c94ff2c" />
   <Project Path="Pizza/Pizza.csproj" Id="c9d68056-2c63-4faf-9691-afe587d76eb8" />
+  <Project Path="TicTacToeGame/TicTacToeGame.csproj" Id="affb33a9-08f7-4f6b-9620-b6987c81ef43" />
 </Solution>
