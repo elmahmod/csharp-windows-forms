@@ -52,7 +52,7 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label1.Font = new System.Drawing.Font("Kristen ITC", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(96)))), ((int)(((byte)(70)))));
-            this.label1.Location = new System.Drawing.Point(117, 128);
+            this.label1.Location = new System.Drawing.Point(149, 125);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label1.Size = new System.Drawing.Size(421, 76);
@@ -75,17 +75,17 @@
             // 
             // lblTurn
             // 
-            this.lblTurn.AutoSize = true;
             this.lblTurn.BackColor = System.Drawing.Color.Transparent;
             this.lblTurn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblTurn.Font = new System.Drawing.Font("Kristen ITC", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTurn.ForeColor = System.Drawing.Color.Teal;
-            this.lblTurn.Location = new System.Drawing.Point(207, 389);
+            this.lblTurn.Location = new System.Drawing.Point(207, 376);
             this.lblTurn.Name = "lblTurn";
             this.lblTurn.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblTurn.Size = new System.Drawing.Size(268, 44);
             this.lblTurn.TabIndex = 12;
             this.lblTurn.Text = "IN PROGRESS";
+            this.lblTurn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
             // 
@@ -94,7 +94,7 @@
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label4.Font = new System.Drawing.Font("Kristen ITC", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Olive;
-            this.label4.Location = new System.Drawing.Point(241, 464);
+            this.label4.Location = new System.Drawing.Point(240, 478);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(192, 51);
             this.label4.TabIndex = 13;
@@ -102,7 +102,6 @@
             // 
             // lblWinner
             // 
-            this.lblWinner.AutoSize = true;
             this.lblWinner.BackColor = System.Drawing.Color.Transparent;
             this.lblWinner.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblWinner.Font = new System.Drawing.Font("Kristen ITC", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -113,7 +112,7 @@
             this.lblWinner.Size = new System.Drawing.Size(268, 44);
             this.lblWinner.TabIndex = 14;
             this.lblWinner.Text = "IN PROGRESS";
-            this.lblWinner.TextChanged += new System.EventHandler(this.lblWinner_TextChanged);
+            this.lblWinner.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnResetGame
             // 

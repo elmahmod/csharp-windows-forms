@@ -103,7 +103,7 @@ namespace TicTacToeVersion2
             }
         }
 
-        string GetPlayerName()
+        string GetPlayerName(enPlayerTurn playerTurn)
         {
             switch (playerTurn)
             {
@@ -120,10 +120,10 @@ namespace TicTacToeVersion2
             switch (gameStatus.winner)
             {
                 case enWinner.Player1:
-                    return GetPlayerName();
+                    return GetPlayerName(enPlayerTurn.Player1);
 
                 case enWinner.Player2:
-                    return GetPlayerName();
+                    return GetPlayerName(enPlayerTurn.Player2);
 
                 case enWinner.Draw:
                     return "Draw";
@@ -132,6 +132,20 @@ namespace TicTacToeVersion2
                     return "In Progress";
             }
             return "Error";
+        }
+
+        void EndGame()
+        {
+            lblWinner.Text = GetWinnerName();
+            lblTurn.Text = "Game Over!";
+            
+            lblWinner.ForeColor = Color.Firebrick;
+            lblTurn.ForeColor = Color.Firebrick;
+
+            if (gameStatus.winner == enWinner.Draw)
+                MessageBox.Show("It's a Draw!", "Game Over");
+            else
+                MessageBox.Show($"{lblWinner.Text} Wins! Congratulations!", "Game Over");
         }
 
         void ChangeImage(Button btn)
@@ -158,7 +172,6 @@ namespace TicTacToeVersion2
                     break;
 
             }
-
             gameStatus.movesCount++;
 
             CheckWinner();
@@ -166,14 +179,7 @@ namespace TicTacToeVersion2
             // ends?
             if (gameStatus.isGameOver)
             {
-                
-                lblWinner.Text = GetWinnerName();
-                lblTurn.Text = "Game Over!";
-                if (gameStatus.winner == enWinner.Draw)
-                    MessageBox.Show("It's a Draw!", "Game Over");
-                else
-                    MessageBox.Show($"{lblWinner.Text} Wins! Congratulations!", "Game Over");
-
+                EndGame();
                 return;
             }
 
@@ -188,7 +194,7 @@ namespace TicTacToeVersion2
                     playerTurn = enPlayerTurn.Player1;
                     break;
             }
-            lblTurn.Text = GetPlayerName();
+            lblTurn.Text = GetPlayerName(playerTurn);
         }
         private void btnImage_Click(object sender, EventArgs e)
         {
@@ -209,7 +215,7 @@ namespace TicTacToeVersion2
             lblWinner.Text = GetWinnerName();
 
             playerTurn = enPlayerTurn.Player1;
-            lblTurn.Text = GetPlayerName();
+            lblTurn.Text = GetPlayerName(playerTurn);
 
             gameStatus.movesCount = 0;
             gameStatus.isGameOver = false;
@@ -230,15 +236,6 @@ namespace TicTacToeVersion2
         private void btnResetGame_Click(object sender, EventArgs e)
         {
             ResetGame();
-        }
-
-        private void lblWinner_TextChanged(object sender, EventArgs e)
-        {
-            if (gameStatus.isGameOver)
-            {
-                lblWinner.ForeColor = Color.Firebrick;
-                lblTurn.ForeColor = Color.Firebrick;
-            }
         }
     }
 }
