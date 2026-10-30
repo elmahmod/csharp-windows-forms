@@ -35,7 +35,7 @@ namespace GuessTheNumberGame
             btRestart.Visible = false;
             txtGuess.Focus();
 
-            counter = 0;
+            counter = 1;
             lblChances.Text = $"({counter}/{lblChances.Tag})";
 
         }
@@ -58,10 +58,6 @@ namespace GuessTheNumberGame
                 txtGuess.Focus();
                 return;
             }
-
-            // Valid attempt
-            counter++;
-            lblChances.Text = $"({counter}/{lblChances.Tag})";
 
             // Check win
             if (guess == guessNumber)
@@ -95,6 +91,10 @@ namespace GuessTheNumberGame
                 btRestart.Visible = true;
                 return;
             }
+
+            // Valid attempt
+            counter++;
+            lblChances.Text = $"({counter}/{lblChances.Tag})";
 
             // Give hints
             if (guess < guessNumber)
