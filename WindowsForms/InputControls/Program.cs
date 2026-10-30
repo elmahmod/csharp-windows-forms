@@ -16,7 +16,7 @@ namespace InputControls
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TextBoxForm());
+            Application.Run(new ComboBoxForm());
         }
     }
 }
