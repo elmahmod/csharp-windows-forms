@@ -19,7 +19,7 @@ namespace GuessTheNumberGame
 
         Random random = new Random();
         int guessNumber;
-
+        int counter = 0;
         private void frmGame_Load(object sender, EventArgs e)
         {
             ResetGame();
@@ -34,6 +34,9 @@ namespace GuessTheNumberGame
             btCheck.Enabled = true;
             btRestart.Visible = false;
             txtGuess.Focus();
+
+            counter = 0;
+            lblChances.Text = $"({counter}/{lblChances.Tag})";
 
         }
 
@@ -56,9 +59,14 @@ namespace GuessTheNumberGame
                 return;
             }
 
+            // Valid attempt
+            counter++;
+            lblChances.Text = $"({counter}/{lblChances.Tag})";
+
+            // Check win
             if (guess == guessNumber)
             {
-                MessageBox.Show("YOU WIN!");
+                MessageBox.Show("YOU WIN!", ":)");
 
                 if (MessageBox.Show("Play Again?", "Restart",
                     MessageBoxButtons.OKCancel,
@@ -76,6 +84,19 @@ namespace GuessTheNumberGame
                 return;
             }
 
+            // Check loss
+            if (counter >= Convert.ToInt32(lblChances.Tag))
+            {
+                MessageBox.Show($"You Lost!", ":(");
+
+                txtGuess.Text = guessNumber.ToString();
+                txtGuess.Enabled = false;
+                btCheck.Enabled = false;
+                btRestart.Visible = true;
+                return;
+            }
+
+            // Give hints
             if (guess < guessNumber)
                 MessageBox.Show("Your guess is too low!");
             else

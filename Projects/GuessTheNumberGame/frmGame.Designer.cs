@@ -34,6 +34,7 @@
             this.btCheck = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btRestart = new System.Windows.Forms.Button();
+            this.lblChances = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -135,6 +136,19 @@
             this.btRestart.UseVisualStyleBackColor = false;
             this.btRestart.Click += new System.EventHandler(this.btRestart_Click);
             // 
+            // lblChances
+            // 
+            this.lblChances.AutoSize = true;
+            this.lblChances.BackColor = System.Drawing.Color.Transparent;
+            this.lblChances.Font = new System.Drawing.Font("Mistral", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChances.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblChances.Location = new System.Drawing.Point(406, 249);
+            this.lblChances.Name = "lblChances";
+            this.lblChances.Size = new System.Drawing.Size(55, 29);
+            this.lblChances.TabIndex = 8;
+            this.lblChances.Tag = "5";
+            this.lblChances.Text = "(5/5)";
+            // 
             // frmGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -142,6 +156,7 @@
             this.BackgroundImage = global::GuessTheNumberGame.Properties.Resources.playingGround;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(608, 388);
+            this.Controls.Add(this.lblChances);
             this.Controls.Add(this.btRestart);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btCheck);
@@ -165,6 +180,7 @@
         private System.Windows.Forms.Button btCheck;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btRestart;
+        private System.Windows.Forms.Label lblChances;
     }
 }
 
