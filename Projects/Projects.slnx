@@ -1,4 +1,5 @@
 <Solution>
+  <Project Path="GuessTheNumberGame/GuessTheNumberGame.csproj" Id="516d7407-987a-43bf-883a-a006b297898a" />
   <Project Path="PCBuilder/PCBuilder.csproj" Id="a85fa6fc-6cb2-409c-aed7-fb981c94ff2c" />
   <Project Path="Pizza/Pizza.csproj" Id="c9d68056-2c63-4faf-9691-afe587d76eb8" />
   <Project Path="RockPaperScissorsGame/RockPaperScissorsGame.csproj" Id="906eb2c2-06e9-455b-ae59-37d15702b0ed" />
