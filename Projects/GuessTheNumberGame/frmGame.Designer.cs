@@ -164,7 +164,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmGame";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Guess The Number";
             this.Load += new System.EventHandler(this.frmGame_Load);
             this.ResumeLayout(false);
