@@ -16,7 +16,7 @@ namespace ContainersAndMenus
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LinkLabel_example());
+            Application.Run(new LinkLabel());
         }
     }
 }
