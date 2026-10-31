@@ -3,5 +3,6 @@
   <Project Path="ContainersAndMenus/ContainersAndMenus.csproj" Id="02cc66a3-9bb8-4057-b1b7-cb53c53f8233" />
   <Project Path="DisplayAndMedia/DisplayAndMedia.csproj" Id="7f4e8c26-56ca-47c5-a3c0-c386f0978b80" />
   <Project Path="InputControls/InputControls.csproj" Id="504e348a-bd17-4776-8706-e9d16f0ac179" />
+  <Project Path="ListAndTreeControls/ListAndTreeControls.csproj" Id="bdef5209-42d8-40de-aab1-cc8ac84871d7" />
   <Project Path="Practicing/Practicing.csproj" Id="1ebf10fa-4cb9-44d9-910a-76848be9c339" />
 </Solution>
