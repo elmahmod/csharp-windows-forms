@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.txtTaskName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,6 +44,8 @@
             this.grbMyTasks = new System.Windows.Forms.GroupBox();
             this.lblTotal = new System.Windows.Forms.Label();
             this.lblRemaining = new System.Windows.Forms.Label();
+            this.tmrReminders = new System.Windows.Forms.Timer(this.components);
+            this.notifyTask = new System.Windows.Forms.NotifyIcon(this.components);
             this.grbAddTask.SuspendLayout();
             this.grbMyTasks.SuspendLayout();
             this.SuspendLayout();
@@ -127,6 +130,7 @@
             this.btnAddTask.TabIndex = 4;
             this.btnAddTask.Text = "Add Task +";
             this.btnAddTask.UseVisualStyleBackColor = true;
+            this.btnAddTask.Click += new System.EventHandler(this.btnAddTask_Click);
             // 
             // btnClearCompleted
             // 
@@ -136,6 +140,7 @@
             this.btnClearCompleted.TabIndex = 1;
             this.btnClearCompleted.Text = "Clear Completed";
             this.btnClearCompleted.UseVisualStyleBackColor = true;
+            this.btnClearCompleted.Click += new System.EventHandler(this.btnClearCompleted_Click);
             // 
             // btnRemoveSelected
             // 
@@ -145,6 +150,7 @@
             this.btnRemoveSelected.TabIndex = 2;
             this.btnRemoveSelected.Text = "Remove Selected";
             this.btnRemoveSelected.UseVisualStyleBackColor = true;
+            this.btnRemoveSelected.Click += new System.EventHandler(this.btnRemoveSelected_Click);
             // 
             // lblCompleted
             // 
@@ -158,11 +164,13 @@
             // 
             // clbTasks
             // 
+            this.clbTasks.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clbTasks.FormattingEnabled = true;
             this.clbTasks.Location = new System.Drawing.Point(22, 37);
             this.clbTasks.Name = "clbTasks";
             this.clbTasks.Size = new System.Drawing.Size(568, 188);
             this.clbTasks.TabIndex = 0;
+            this.clbTasks.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.clbTasks_ItemCheck);
             // 
             // grbMyTasks
             // 
@@ -200,6 +208,15 @@
             this.lblRemaining.Text = "1\r\nRemaining";
             this.lblRemaining.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // tmrReminders
+            // 
+            this.tmrReminders.Tick += new System.EventHandler(this.tmrReminders_Tick);
+            // 
+            // notifyTask
+            // 
+            this.notifyTask.Text = "notifyIcon1";
+            this.notifyTask.Visible = true;
+            // 
             // frmTaskManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -236,6 +253,8 @@
         private System.Windows.Forms.GroupBox grbMyTasks;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Label lblRemaining;
+        private System.Windows.Forms.Timer tmrReminders;
+        private System.Windows.Forms.NotifyIcon notifyTask;
     }
 }
 
