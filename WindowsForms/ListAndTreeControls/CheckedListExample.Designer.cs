@@ -138,12 +138,12 @@
             // 
             // txtTask
             // 
-            this.txtTask.Location = new System.Drawing.Point(217, 116);
+            this.txtTask.Location = new System.Drawing.Point(229, 109);
             this.txtTask.Name = "txtTask";
             this.txtTask.Size = new System.Drawing.Size(274, 26);
             this.txtTask.TabIndex = 10;
             // 
-            // CheckedList_example
+            // CheckedListExample
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -160,7 +160,7 @@
             this.Controls.Add(this.btnAddTask);
             this.Controls.Add(this.chklistTaks);
             this.DoubleBuffered = true;
-            this.Name = "CheckedList_example";
+            this.Name = "CheckedListExample";
             this.Text = "to do list";
             this.Load += new System.EventHandler(this.CheckedList_example_Load);
             this.ResumeLayout(false);

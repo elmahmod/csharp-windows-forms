@@ -50,5 +50,13 @@ namespace Practicing
             themeSwitcher.ShowDialog();
             this.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form digitalClock = new DigitalClock();
+            digitalClock.ShowDialog();
+            this.Show();
+        }
     }
 }
