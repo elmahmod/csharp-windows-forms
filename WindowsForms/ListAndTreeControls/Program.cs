@@ -16,7 +16,7 @@ namespace ListAndTreeControls
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CheckedListExample());
+            Application.Run(new TreeView());
         }
     }
 }
