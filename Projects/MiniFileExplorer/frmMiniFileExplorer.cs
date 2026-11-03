@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MiniFileExplorer
 {
-    public partial class Form1 : Form
+    public partial class frmMiniFileExplorer : Form
     {
-        public Form1()
+        public frmMiniFileExplorer()
         {
             InitializeComponent();
         }
