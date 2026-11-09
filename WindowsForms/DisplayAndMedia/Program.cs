@@ -16,7 +16,7 @@ namespace DisplayAndMedia
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new NotifyIconForm());
+            Application.Run(new ProgressBar());
         }
     }
 }
