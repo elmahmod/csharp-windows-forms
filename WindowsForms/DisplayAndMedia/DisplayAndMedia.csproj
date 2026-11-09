@@ -60,6 +60,12 @@
     <Compile Include="NotifyIconForm.Designer.cs">
       <DependentUpon>NotifyIconForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="PorgressBarExampleBool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PorgressBarExampleBool.Designer.cs">
+      <DependentUpon>PorgressBarExampleBool.cs</DependentUpon>
+    </Compile>
     <Compile Include="PorgressBarExample.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +100,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PictureBox.resx">
       <DependentUpon>PictureBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PorgressBarExampleBool.resx">
+      <DependentUpon>PorgressBarExampleBool.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PorgressBarExample.resx">
       <DependentUpon>PorgressBarExample.cs</DependentUpon>
