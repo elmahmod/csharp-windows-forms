@@ -61,11 +61,16 @@
             this.btnOrderPizza = new System.Windows.Forms.Button();
             this.btnResetForm = new System.Windows.Forms.Button();
             this.btnReOrder = new System.Windows.Forms.Button();
+            this.numericPizzaNumber = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblPizzaNumber = new System.Windows.Forms.Label();
             this.grpSize.SuspendLayout();
             this.grpCrustType.SuspendLayout();
             this.grpToppings.SuspendLayout();
             this.grpWhereToEat.SuspendLayout();
             this.grpOrderSummary.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericPizzaNumber)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -299,6 +304,8 @@
             // 
             // grpOrderSummary
             // 
+            this.grpOrderSummary.Controls.Add(this.lblPizzaNumber);
+            this.grpOrderSummary.Controls.Add(this.label2);
             this.grpOrderSummary.Controls.Add(this.lblTotalPriceValue);
             this.grpOrderSummary.Controls.Add(this.lblWhereToEatValue);
             this.grpOrderSummary.Controls.Add(this.lblCrustTypeValue);
@@ -321,7 +328,7 @@
             this.lblTotalPriceValue.AutoSize = true;
             this.lblTotalPriceValue.Font = new System.Drawing.Font("Microsoft New Tai Lue", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalPriceValue.ForeColor = System.Drawing.Color.Green;
-            this.lblTotalPriceValue.Location = new System.Drawing.Point(160, 382);
+            this.lblTotalPriceValue.Location = new System.Drawing.Point(156, 413);
             this.lblTotalPriceValue.Name = "lblTotalPriceValue";
             this.lblTotalPriceValue.Size = new System.Drawing.Size(208, 43);
             this.lblTotalPriceValue.TabIndex = 17;
@@ -366,7 +373,7 @@
             // 
             this.lblTotalPriceTitle.AutoSize = true;
             this.lblTotalPriceTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalPriceTitle.Location = new System.Drawing.Point(20, 393);
+            this.lblTotalPriceTitle.Location = new System.Drawing.Point(16, 424);
             this.lblTotalPriceTitle.Name = "lblTotalPriceTitle";
             this.lblTotalPriceTitle.Size = new System.Drawing.Size(94, 20);
             this.lblTotalPriceTitle.TabIndex = 12;
@@ -444,12 +451,52 @@
             this.btnReOrder.UseVisualStyleBackColor = true;
             this.btnReOrder.Click += new System.EventHandler(this.btnReOrder_Click);
             // 
+            // numericPizzaNumber
+            // 
+            this.numericPizzaNumber.Location = new System.Drawing.Point(185, 636);
+            this.numericPizzaNumber.Name = "numericPizzaNumber";
+            this.numericPizzaNumber.ReadOnly = true;
+            this.numericPizzaNumber.Size = new System.Drawing.Size(82, 26);
+            this.numericPizzaNumber.TabIndex = 8;
+            this.numericPizzaNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numericPizzaNumber.ValueChanged += new System.EventHandler(this.numericPizzaNumber_ValueChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(59, 638);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(107, 20);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Pizza Number";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(20, 370);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(119, 20);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Pizza Number";
+            // 
+            // lblPizzaNumber
+            // 
+            this.lblPizzaNumber.AutoSize = true;
+            this.lblPizzaNumber.Location = new System.Drawing.Point(160, 369);
+            this.lblPizzaNumber.Name = "lblPizzaNumber";
+            this.lblPizzaNumber.Size = new System.Drawing.Size(118, 20);
+            this.lblPizzaNumber.TabIndex = 19;
+            this.lblPizzaNumber.Text = "lblPizzaNumber";
+            // 
             // frmPizzaOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(1228, 834);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.numericPizzaNumber);
             this.Controls.Add(this.btnReOrder);
             this.Controls.Add(this.btnResetForm);
             this.Controls.Add(this.btnOrderPizza);
@@ -473,6 +520,7 @@
             this.grpWhereToEat.PerformLayout();
             this.grpOrderSummary.ResumeLayout(false);
             this.grpOrderSummary.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericPizzaNumber)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -512,6 +560,10 @@
         private System.Windows.Forms.Label lblWhereToEatTitle;
         private System.Windows.Forms.Label lblCrustTypeTitle;
         private System.Windows.Forms.Button btnReOrder;
+        private System.Windows.Forms.Label lblPizzaNumber;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.NumericUpDown numericPizzaNumber;
+        private System.Windows.Forms.Label label1;
     }
 }
 

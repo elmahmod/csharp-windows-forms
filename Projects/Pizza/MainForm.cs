@@ -32,6 +32,8 @@ namespace Pizza
 
             btnReOrder.Enabled = false;
 
+            numericPizzaNumber.Value = 1;
+
             UpdateOrderSummary();
         }
 
@@ -87,9 +89,14 @@ namespace Pizza
             return totalToppingsPrice;
         }
 
+        int GetPizzaNumber()
+        {
+            return (int)numericPizzaNumber.Value;
+        }
+
         private float CalculateTotalPrice()
         {
-            return GetSelectedSizePricing() + GetSelectedCrustPricing() + GetSelectedToppingsPricing();
+            return (GetSelectedSizePricing() + GetSelectedCrustPricing() + GetSelectedToppingsPricing()) * GetPizzaNumber();
         }
 
         void UpdateTotalPrice()
@@ -161,12 +168,19 @@ namespace Pizza
                 lblToppingsValue.Text = toppings.TrimStart(',', ' ');
         }
 
+        void UpdatePizzaNumber()
+        {
+            lblPizzaNumber.Text = numericPizzaNumber.Value.ToString();
+
+        }
+
         void UpdateOrderSummary()
         {
             UpdateSize();
             UpdateCrust();
             UpdateToppings();
             UpdateWhereToEat();
+            UpdatePizzaNumber();
         }
 
         private void rbSmall_CheckedChanged(object sender, EventArgs e)
@@ -255,6 +269,8 @@ namespace Pizza
                 btnOrderPizza.Enabled = false;
                 btnResetForm.Enabled = false;
                 btnReOrder.Enabled = true;
+
+                numericPizzaNumber.Enabled = false;
             }
         }
 
@@ -269,6 +285,8 @@ namespace Pizza
             rbSmall.Checked = true;
             rbThin.Checked = true;
             rbEatIn.Checked = true;
+
+            numericPizzaNumber.Value = 1;
         }
 
         private void btnReOrder_Click(object sender, EventArgs e)
@@ -284,6 +302,14 @@ namespace Pizza
 
             btnOrderPizza.Enabled = true;
             btnResetForm.Enabled = true;
+
+            numericPizzaNumber.Enabled = true;
+        }
+
+        private void numericPizzaNumber_ValueChanged(object sender, EventArgs e)
+        {
+            UpdateTotalPrice();
+            UpdatePizzaNumber();
         }
     }
 }
