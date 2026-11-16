@@ -77,7 +77,6 @@
             // 
             // findClientToolStripMenuItem
             // 
-            this.findClientToolStripMenuItem.Image = global::Menus.Properties.Resources.Screenshot_2026_11_16_072647;
             this.findClientToolStripMenuItem.Name = "findClientToolStripMenuItem";
             this.findClientToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.findClientToolStripMenuItem.Text = "Find Client";
