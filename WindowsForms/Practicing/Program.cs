@@ -16,7 +16,7 @@ namespace Practicing
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new VolumeAndRGBController());
+            Application.Run(new MiniDownloadManager());
         }
     }
 }
