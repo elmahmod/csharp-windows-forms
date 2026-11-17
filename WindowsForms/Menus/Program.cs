@@ -16,7 +16,7 @@ namespace Menus
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMiniNotepad());
+            Application.Run(new frmMenuContext());
         }
     }
 }

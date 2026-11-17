@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmMenuContext.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenuContext.Designer.cs">
+      <DependentUpon>frmMenuContext.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMenuStrip.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +66,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmMenuContext.resx">
+      <DependentUpon>frmMenuContext.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMenuStrip.resx">
       <DependentUpon>frmMenuStrip.cs</DependentUpon>
     </EmbeddedResource>
