@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StudentManagementSystem
 {
-    internal class Student
+    public class Student
     {
         public int StudentID { get; set; }
         public string FullName { get; set; }

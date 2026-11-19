@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuExit = new System.Windows.Forms.ToolStripMenuItem();
             this.studentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuViewStudents = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuAddStudents = new System.Windows.Forms.ToolStripMenuItem();
+            this.fillWithRandomStudentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.windowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuCascade = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuTileVertical = new System.Windows.Forms.ToolStripMenuItem();
@@ -70,7 +72,7 @@
             // mnuExit
             // 
             this.mnuExit.Name = "mnuExit";
-            this.mnuExit.Size = new System.Drawing.Size(270, 34);
+            this.mnuExit.Size = new System.Drawing.Size(141, 34);
             this.mnuExit.Text = "Exit";
             this.mnuExit.Click += new System.EventHandler(this.mnuExit_Click);
             // 
@@ -92,9 +94,19 @@
             // 
             // mnuAddStudents
             // 
+            this.mnuAddStudents.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fillWithRandomStudentsToolStripMenuItem});
             this.mnuAddStudents.Name = "mnuAddStudents";
             this.mnuAddStudents.Size = new System.Drawing.Size(270, 34);
             this.mnuAddStudents.Text = "Add Students";
+            this.mnuAddStudents.Click += new System.EventHandler(this.mnuAddStudents_Click);
+            // 
+            // fillWithRandomStudentsToolStripMenuItem
+            // 
+            this.fillWithRandomStudentsToolStripMenuItem.Name = "fillWithRandomStudentsToolStripMenuItem";
+            this.fillWithRandomStudentsToolStripMenuItem.Size = new System.Drawing.Size(324, 34);
+            this.fillWithRandomStudentsToolStripMenuItem.Text = "Fill With Random Students";
+            this.fillWithRandomStudentsToolStripMenuItem.Click += new System.EventHandler(this.fillWithRandomStudentsToolStripMenuItem_Click);
             // 
             // windowToolStripMenuItem
             // 
@@ -109,19 +121,19 @@
             // mnuCascade
             // 
             this.mnuCascade.Name = "mnuCascade";
-            this.mnuCascade.Size = new System.Drawing.Size(270, 34);
+            this.mnuCascade.Size = new System.Drawing.Size(227, 34);
             this.mnuCascade.Text = "Cascade";
             // 
             // mnuTileVertical
             // 
             this.mnuTileVertical.Name = "mnuTileVertical";
-            this.mnuTileVertical.Size = new System.Drawing.Size(270, 34);
+            this.mnuTileVertical.Size = new System.Drawing.Size(227, 34);
             this.mnuTileVertical.Text = "Tile Vertical";
             // 
             // mnuTileHorizontal
             // 
             this.mnuTileHorizontal.Name = "mnuTileHorizontal";
-            this.mnuTileHorizontal.Size = new System.Drawing.Size(270, 34);
+            this.mnuTileHorizontal.Size = new System.Drawing.Size(227, 34);
             this.mnuTileHorizontal.Text = "Tile Horizontal";
             // 
             // lblStatus
@@ -157,11 +169,13 @@
             this.ClientSize = new System.Drawing.Size(939, 633);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMain";
             this.Text = "Student Management System";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
@@ -186,6 +200,7 @@
         private System.Windows.Forms.ToolStripStatusLabel lblStatus;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblTotalStudents;
+        private System.Windows.Forms.ToolStripMenuItem fillWithRandomStudentsToolStripMenuItem;
     }
 }
 

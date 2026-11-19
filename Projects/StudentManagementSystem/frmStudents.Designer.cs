@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.pnlTop = new System.Windows.Forms.Panel();
+            this.cbView = new System.Windows.Forms.ComboBox();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.lblSearch = new System.Windows.Forms.Label();
             this.btnEditStudent = new System.Windows.Forms.Button();
@@ -47,12 +48,14 @@
             this.cmdStudents = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.mnuEditStudent = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuDeleteStudent = new System.Windows.Forms.ToolStripMenuItem();
+            this.imgStudentPhotos = new System.Windows.Forms.ImageList(this.components);
             this.pnlTop.SuspendLayout();
             this.cmdStudents.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlTop
             // 
+            this.pnlTop.Controls.Add(this.cbView);
             this.pnlTop.Controls.Add(this.txtSearch);
             this.pnlTop.Controls.Add(this.lblSearch);
             this.pnlTop.Controls.Add(this.btnEditStudent);
@@ -64,6 +67,21 @@
             this.pnlTop.Size = new System.Drawing.Size(1109, 82);
             this.pnlTop.TabIndex = 0;
             // 
+            // cbView
+            // 
+            this.cbView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbView.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbView.FormattingEnabled = true;
+            this.cbView.Items.AddRange(new object[] {
+            "Details",
+            "Large Icons",
+            "Tile"});
+            this.cbView.Location = new System.Drawing.Point(508, 22);
+            this.cbView.Name = "cbView";
+            this.cbView.Size = new System.Drawing.Size(107, 28);
+            this.cbView.TabIndex = 6;
+            this.cbView.SelectedIndexChanged += new System.EventHandler(this.cbView_SelectedIndexChanged);
+            // 
             // txtSearch
             // 
             this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -73,6 +91,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(360, 42);
             this.txtSearch.TabIndex = 4;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // lblSearch
             // 
@@ -85,33 +104,36 @@
             // btnEditStudent
             // 
             this.btnEditStudent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEditStudent.Location = new System.Drawing.Point(732, 14);
+            this.btnEditStudent.Location = new System.Drawing.Point(815, 14);
             this.btnEditStudent.Name = "btnEditStudent";
-            this.btnEditStudent.Size = new System.Drawing.Size(168, 42);
+            this.btnEditStudent.Size = new System.Drawing.Size(136, 42);
             this.btnEditStudent.TabIndex = 2;
             this.btnEditStudent.Text = "Edit";
             this.btnEditStudent.UseVisualStyleBackColor = true;
+            this.btnEditStudent.Click += new System.EventHandler(this.btnEditStudent_Click);
             // 
             // btnAddStudent
             // 
             this.btnAddStudent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAddStudent.AutoSize = true;
-            this.btnAddStudent.Location = new System.Drawing.Point(538, 14);
+            this.btnAddStudent.Location = new System.Drawing.Point(660, 14);
             this.btnAddStudent.Name = "btnAddStudent";
-            this.btnAddStudent.Size = new System.Drawing.Size(168, 42);
+            this.btnAddStudent.Size = new System.Drawing.Size(136, 42);
             this.btnAddStudent.TabIndex = 1;
             this.btnAddStudent.Text = "Add";
             this.btnAddStudent.UseVisualStyleBackColor = true;
+            this.btnAddStudent.Click += new System.EventHandler(this.btnAddStudent_Click);
             // 
             // btnDeleteStudent
             // 
             this.btnDeleteStudent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDeleteStudent.Location = new System.Drawing.Point(926, 14);
+            this.btnDeleteStudent.Location = new System.Drawing.Point(970, 14);
             this.btnDeleteStudent.Name = "btnDeleteStudent";
-            this.btnDeleteStudent.Size = new System.Drawing.Size(168, 42);
+            this.btnDeleteStudent.Size = new System.Drawing.Size(136, 42);
             this.btnDeleteStudent.TabIndex = 3;
             this.btnDeleteStudent.Text = "Delete";
             this.btnDeleteStudent.UseVisualStyleBackColor = true;
+            this.btnDeleteStudent.Click += new System.EventHandler(this.btnDeleteStudent_Click);
             // 
             // lvStudents
             // 
@@ -126,13 +148,16 @@
             this.colEnrollmentDate});
             this.lvStudents.ContextMenuStrip = this.cmdStudents;
             this.lvStudents.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lvStudents.FullRowSelect = true;
             this.lvStudents.HideSelection = false;
+            this.lvStudents.LargeImageList = this.imgStudentPhotos;
             this.lvStudents.Location = new System.Drawing.Point(10, 92);
             this.lvStudents.Name = "lvStudents";
             this.lvStudents.Size = new System.Drawing.Size(1109, 525);
             this.lvStudents.TabIndex = 6;
             this.lvStudents.UseCompatibleStateImageBehavior = false;
             this.lvStudents.View = System.Windows.Forms.View.Details;
+            this.lvStudents.DoubleClick += new System.EventHandler(this.lvStudents_DoubleClick);
             // 
             // colStudentID
             // 
@@ -147,7 +172,7 @@
             // colDepartment
             // 
             this.colDepartment.Text = "Department";
-            this.colDepartment.Width = 180;
+            this.colDepartment.Width = 220;
             // 
             // colAcademicYear
             // 
@@ -188,12 +213,20 @@
             this.mnuEditStudent.Name = "mnuEditStudent";
             this.mnuEditStudent.Size = new System.Drawing.Size(200, 32);
             this.mnuEditStudent.Text = "Edit Student";
+            this.mnuEditStudent.Click += new System.EventHandler(this.mnuEditStudent_Click);
             // 
             // mnuDeleteStudent
             // 
             this.mnuDeleteStudent.Name = "mnuDeleteStudent";
             this.mnuDeleteStudent.Size = new System.Drawing.Size(200, 32);
             this.mnuDeleteStudent.Text = "Delete Student";
+            this.mnuDeleteStudent.Click += new System.EventHandler(this.mnuDeleteStudent_Click);
+            // 
+            // imgStudentPhotos
+            // 
+            this.imgStudentPhotos.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
+            this.imgStudentPhotos.ImageSize = new System.Drawing.Size(96, 96);
+            this.imgStudentPhotos.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // frmStudents
             // 
@@ -205,6 +238,7 @@
             this.Name = "frmStudents";
             this.Padding = new System.Windows.Forms.Padding(10);
             this.Text = "Students Management";
+            this.Load += new System.EventHandler(this.frmStudents_Load);
             this.pnlTop.ResumeLayout(false);
             this.pnlTop.PerformLayout();
             this.cmdStudents.ResumeLayout(false);
@@ -232,5 +266,7 @@
         private System.Windows.Forms.ToolStripMenuItem mnuDeleteStudent;
         private System.Windows.Forms.ColumnHeader colStudentStatus;
         private System.Windows.Forms.ColumnHeader colEnrollmentDate;
+        private System.Windows.Forms.ComboBox cbView;
+        private System.Windows.Forms.ImageList imgStudentPhotos;
     }
 }
